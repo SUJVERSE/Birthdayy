@@ -1,1 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #02030d;
+    color: white;
+}
+
+/* =========================
+   SPACE
+========================= */
+
+.space {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #111a46 0%,
+            #080d2a 25%,
+            #030516 55%,
+            #010108 100%
+        );
+}
+
+/* =========================
+   STARS
+========================= */
+
+.stars,
+.stars::before,
+.stars::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(circle, white 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px);
+
+    background-size:
+        120px 120px,
+        180px 180px,
+        250px 250px;
+
+    animation: starsMove 20s linear infinite;
+}
+
+.stars::before {
+    opacity: 0.5;
+    transform: scale(1.4);
+    animation-duration: 35s;
+}
+
+.stars::after {
+    opacity: 0.25;
+    transform: scale(1.8);
+    animation-duration: 50s;
+}
+
+@keyframes starsMove {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-120px);
+    }
+}
+
+/* =========================
+   MOON
+========================= */
+
+.moon {
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    top: 7%;
+    right: 8%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #fffdf3,
+            #e8e5d2 60%,
+            #bdbba9 100%
+        );
+
+    box-shadow:
+        0 0 30px rgba(255,255,230,0.5),
+        0 0 80px rgba(255,255,230,0.18);
+}
+
+.crater {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(120,120,110,0.15);
+}
+
+.crater1 {
+    width: 28px;
+    height: 28px;
+    top: 30px;
+    left: 40px;
+}
+
+.crater2 {
+    width: 18px;
+    height: 18px;
+    top: 80px;
+    left: 90px;
+}
+
+.crater3 {
+    width: 35px;
+    height: 35px;
+    top: 105px;
+    left: 45px;
+}
+
+/* =========================
+   SUN
+========================= */
+
+.sun {
+    position: absolute;
+
+    width: 110px;
+    height: 110px;
+
+    bottom: 8%;
+    left: 7%;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        #fff7bd 0%,
+        #ffd86b 45%,
+        #ff9d35 100%
+    );
+
+    box-shadow:
+        0 0 30px #ffd86b,
+        0 0 80px rgba(255,180,60,0.5),
+        0 0 150px rgba(255,130,30,0.25);
+
+    animation: sunPulse 5s ease-in-out infinite;
+}
+
+@keyframes sunPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* =========================
+   BIRTHDAY CONTENT
+========================= */
+
+.birthday-card {
+    position: relative;
+    z-index: 10;
+
+    width: min(760px, 90%);
+
+    margin: auto;
+    padding: 100px 20px 120px;
+
+    text-align: center;
+
+    animation: appear 2s ease forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.little-text {
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    opacity: 0.7;
+}
+
+h1 {
+    font-size: clamp(42px, 8vw, 78px);
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 20px rgba(255,255,255,0.3),
+        0 0 60px rgba(170,190,255,0.3);
+}
+
+h2 {
+    margin-top: 18px;
+
+    font-size: clamp(24px, 5vw, 38px);
+
+    font-weight: 400;
+
+    direction: rtl;
+
+    color: #e9e4ff;
+
+    text-shadow:
+        0 0 20px rgba(200,190,255,0.5);
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    margin: 45px 0;
+
+    color: #d9d2ff;
+
+    font-size: 20px;
+
+    opacity: 0.8;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    max-width: 650px;
+
+    margin: 25px auto;
+
+    font-size: 19px;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,0.88);
+}
+
+.message strong {
+    color: #fff3c4;
+
+    text-shadow:
+        0 0 15px rgba(255,220,120,0.5);
+}
+
+.final-message {
+    margin-top: 45px;
+
+    font-size: 20px;
+
+    color: #eee9ff;
+}
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.signature {
+    margin-top: 40px;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    color: #ffdede;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    margin-top: 60px;
+
+    padding: 16px 32px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.07);
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 0 25px rgba(180,190,255,0.3);
+}
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 600px) {
+
+    .moon {
+        width: 100px;
+        height: 100px;
+
+        top: 3%;
+        right: -15px;
+    }
+
+    .sun {
+        width: 65px;
+        height: 65px;
+
+        bottom: 3%;
+        left: -10px;
+    }
+
+    .birthday-card {
+        padding-top: 150px;
+    }
+
+    .little-text {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .message {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    button {
+        width: 80%;
+    }
+}
