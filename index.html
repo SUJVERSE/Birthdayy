@@ -2,105 +2,370 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Happy Birthday Sara 🌙</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Sara 🌙✨</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Deep Space Background -->
-    <div class="space">
+<!-- =====================================================
+     COSMIC BACKGROUND
+===================================================== -->
 
-        <!-- Stars -->
-        <div class="stars"></div>
+<div id="stars"></div>
+<div id="shooting-stars"></div>
+<div id="particles"></div>
 
-        <!-- Moon -->
-        <div class="moon">
-            <div class="crater crater1"></div>
-            <div class="crater crater2"></div>
-            <div class="crater crater3"></div>
+<div class="nebula nebula-one"></div>
+<div class="nebula nebula-two"></div>
+
+<div class="planet planet-one"></div>
+<div class="planet planet-two"></div>
+
+<div class="moon">
+    <div class="moon-crater crater-one"></div>
+    <div class="moon-crater crater-two"></div>
+    <div class="moon-crater crater-three"></div>
+</div>
+
+<div class="sun"></div>
+
+<!-- Earth horizon -->
+
+<div class="earth">
+    <div class="earth-glow"></div>
+</div>
+
+
+<!-- =====================================================
+     MAIN EXPERIENCE
+===================================================== -->
+
+<main class="experience">
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+        <div class="cosmic-label">
+            ✦ A LITTLE UNIVERSE MADE FOR YOU ✦
         </div>
 
-        <!-- Sun -->
-        <div class="sun"></div>
+        <h1>
+            Happy Birthday
+            <span>Sara</span>
+        </h1>
 
-        <!-- Main Content -->
-        <main class="birthday-card">
+        <h2>
+            عيد ميلاد سعيد، سارة
+        </h2>
 
-            <p class="little-text">A little universe made just for you ✨</p>
+        <div class="gold-line">
+            <span>✦</span>
+            <span>☾</span>
+            <span>✦</span>
+        </div>
 
-            <h1>
-                Happy Birthday, Sara
-            </h1>
+        <p class="intro-text">
+            Somewhere among all the billions of stars,
+            I'm really glad our paths crossed.
+        </p>
+
+    </section>
+
+
+    <!-- =================================================
+         BIRTHDAY CARD
+    ================================================= -->
+
+    <section class="card-section">
+
+        <div class="birthday-card" id="birthdayCard">
+
+            <!-- FRONT OF CARD -->
+
+            <div class="card-front">
+
+                <div class="card-stars"></div>
+
+                <div class="card-top">
+                    <span>FOR SARA</span>
+                    <span>♡</span>
+                </div>
+
+                <div class="portrait-frame">
+
+                    <div class="portrait-glow"></div>
+
+                    <!-- PUT SARA'S PHOTO HERE -->
+                    <img
+                        src="sara.jpg"
+                        alt="Sara"
+                        class="sara-photo"
+                    >
+
+                </div>
+
+                <h3>
+                    Happy Birthday,
+                    <strong>Sara</strong>
+                </h3>
+
+                <p>
+                    A little surprise from someone
+                    who loves you very much.
+                </p>
+
+                <button
+                    class="flip-button"
+                    id="flipButton"
+                >
+                    FLIP ME ✦
+                </button>
+
+            </div>
+
+
+            <!-- BACK OF CARD -->
+
+            <div class="card-back">
+
+                <div class="envelope" id="envelope">
+
+                    <!-- Envelope flap -->
+
+                    <div class="envelope-flap"></div>
+
+                    <!-- Letter -->
+
+                    <div class="letter" id="letter">
+
+                        <div class="letter-decoration">
+                            ☾ ✦ ☀ ✦ ☽
+                        </div>
+
+                        <h3>
+                            To my dearest Sara,
+                        </h3>
+
+                        <p>
+                            I don't think you realize how special
+                            you have become to me.
+                        </p>
+
+                        <p>
+                            Somewhere along the way, you stopped
+                            being just a friend.
+                        </p>
+
+                        <p>
+                            You became my
+                            <strong>
+                                sister from another mother.
+                            </strong>
+                        </p>
+
+                        <p>
+                            You're one of those rare people who
+                            somehow make life feel a little lighter,
+                            a little funnier and a lot more beautiful.
+                        </p>
+
+                        <p>
+                            I love you so, so much —
+                            truly, genuinely, and with all my heart.
+                            ❤️
+                        </p>
+
+                        <p>
+                            I'm incredibly grateful that life
+                            decided to put you in my story.
+                        </p>
+
+                        <p>
+                            No matter how far life takes us,
+                            you'll always have a brother somewhere
+                            in this enormous universe cheering
+                            for you.
+                        </p>
+
+                        <div class="letter-signature">
+                            With lots and lots of love,<br>
+                            <span>Suj ❤️</span>
+                        </div>
+
+                    </div>
+
+                    <div class="envelope-heart">
+                        ♥
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="surprise-button"
+                    id="surpriseButton"
+                >
+                    OPEN YOUR SURPRISE ✨
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CELEBRATION
+    ================================================= -->
+
+    <section
+        class="celebration"
+        id="celebration"
+    >
+
+        <div class="celebration-title">
+
+            <p>
+                AND NOW...
+            </p>
 
             <h2>
-                عيد ميلاد سعيد، سارة
+                MAKE A WISH, SARA ✨
             </h2>
 
-            <div class="divider">
-                <span>✦</span>
-                <span>☾</span>
-                <span>✦</span>
+        </div>
+
+
+        <!-- Balloons -->
+
+        <div class="balloons">
+
+            <div class="balloon balloon-purple">
+                <span></span>
             </div>
 
-            <p class="message">
-                Sara...
-            </p>
-
-            <p class="message">
-                Somewhere along the way, you stopped being
-                just a friend to me.
-            </p>
-
-            <p class="message">
-                You became something much more special —
-                <strong>a sister from another mother.</strong>
-            </p>
-
-            <p class="message">
-                I don't think I can properly explain how much
-                you mean to me. You have become one of those
-                rare people who feel like home, someone I can
-                laugh with, talk to, annoy, trust, and simply
-                be myself around.
-            </p>
-
-            <p class="message">
-                I'm genuinely so grateful that life somehow
-                decided to put you in my story.
-            </p>
-
-            <p class="message">
-                I love you so, so much —
-                not in the way you love someone because you
-                have to, but in the way you love a sister
-                because somewhere in your heart,
-                she simply became family. ❤️
-            </p>
-
-            <p class="message final-message">
-                No matter where life takes us,
-                I hope you always remember that you'll
-                have a brother cheering for you from somewhere
-                in this enormous universe.
-            </p>
-
-            <div class="signature">
-                — Your brother, Suj ❤️
+            <div class="balloon balloon-gold">
+                <span></span>
             </div>
 
-            <button id="continueButton">
-                There's more... ✨
-            </button>
+            <div class="balloon balloon-pink">
+                <span></span>
+            </div>
 
-        </main>
+            <div class="balloon balloon-blue">
+                <span></span>
+            </div>
 
-    </div>
+            <div class="balloon balloon-heart">
+                ♥
+                <span></span>
+            </div>
 
-    <script src="script.js"></script>
+        </div>
+
+
+        <!-- Cake -->
+
+        <div class="cake-container">
+
+            <div class="cake-glow"></div>
+
+            <div class="cake">
+
+                <!-- candles -->
+
+                <div class="candles">
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                </div>
+
+                <div class="cake-top"></div>
+
+                <div class="cake-body">
+
+                    <div class="cake-drip"></div>
+
+                    <div class="cake-writing">
+                        Happy Birthday
+                        <br>
+                        Sara ❤️
+                    </div>
+
+                </div>
+
+                <div class="cake-base"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="final-message">
+
+            <div class="final-stars">
+                ✦　✧　✦　☾　✦　✧　✦
+            </div>
+
+            <h2>
+                You deserve
+                <span>all the stars</span>
+                in the universe.
+            </h2>
+
+            <p>
+                Happy Birthday, my sister from another mother.
+                ❤️
+            </p>
+
+            <div class="final-signature">
+                — Suj
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- Confetti container -->
+
+<div id="confetti"></div>
+
+<!-- Fireworks -->
+
+<div id="fireworks"></div>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
